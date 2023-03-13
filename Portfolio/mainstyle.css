@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'NanumSquareNeo-Variable';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Poppins:wght@800&family=Varela+Round&display=swap');
+}
+
+@media ( min-width : 1000px) {
+	.container {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	header {
+		z-index: 999;
+	}
+	#menu > #logo {
+		display: inline-block;
+		float: left;
+	}
+}
+
+@media ( max-width : 1000px) {
+	header {
+		height: auto;
+	}
+	#menu > #logo {
+		display: block;
+	}
+}
+
+* {
+	/* font-family: 'NanumSquareNeo-Variable'; */
+    font-family: 'Noto Sans KR', sans-serif;
+    /* border: 1px solid;  */
+    /* background-color: #fff9f8; */
+}
+
+header, footer, main {
+	margin: 10px;
+}
+
+/* 여백 초기화 */
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset,
+	legend, p, select, table, th, td, tr, textarea, button, form {
+	margin: 0;
+	padding: 0;
+}
+
+/* a 링크 초기화 */
+a {
+	color: #222;
+	text-decoration: none;
+}
+a:hover {
+	color: #3853a4;
+}
+
+/* 폰트 초기화 */
+body, input, textarea, select, button, table {
+	color: #222;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+/* 폰트 스타일 초기화 */
+em, address {
+	font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+dl, ul, li, ol, menu {
+	list-style: none;
+}
+
+/* 테두리 초기화 */
+img, fieldset {
+	border: 0 none;
+}
+
+/* header */
+header {
+	text-align: center;
+	top: 0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+	/* border-bottom: 1px solid #eee; */
+	position: sticky;
+	background-color: white;
+	font-size: 14px;
+}
+#menu {
+    display: flex;
+}
+#logo > img {
+    width: 250px;
+}
+#logo > img:hover {
+    content: url(./logo2.png);
+}
+.menu-bar {
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.menu-bar > li {
+    margin: auto;
+    margin-left: 35px;
+    margin-right: 5px;
+}
+
+/* main */
+main {
+    min-height: 64vh;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+main > div {
+    text-align: center;
+    padding: 20px 0;
+}
+#about {
+    background-color: #fff7f5;
+}
+.about-content > div {
+    width: 230px;
+    margin: 5px;
+    padding: 20px;
+    display: inline-block;
+}
+.about-content > div > span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 0 10px 10px;
+}
+.about-content > div > i {
+    font-size: 2rem;  
+    margin-top: auto;
+}
