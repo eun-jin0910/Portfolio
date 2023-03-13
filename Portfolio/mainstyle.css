@@ -46,9 +46,9 @@
     /* background-color: #fff9f8; */
 }
 
-header, footer {
+/* header, footer {
 	margin: 10px;
-}
+} */
 
 /* 여백 초기화 */
 body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset,
@@ -92,15 +92,17 @@ img, fieldset {
 header {
 	text-align: center;
 	top: 0;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    padding: 5px 0;
 	/* border-bottom: 1px solid #eee; */
 	position: sticky;
 	background-color: white;
 	font-size: 14px;
+	z-index: 10;
 }
 #menu {
     display: flex;
+	margin: 10px;
+	margin-bottom: 0;
 }
 #logo > img {
     width: 250px;
@@ -117,45 +119,70 @@ header {
 }
 .menu-bar > li {
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #menu-bar-last {
-	padding-right: 5px;
+	margin-right: 5px;
 }
 #menu-body {
 	position: absolute;
  	top: 100%;
+	display: flex;
+	justify-content: center;
 	display: none;
-	margin: 0;
-	padding: 0;
-	background-color: rgba(255, 255, 255, 0.8);
 } 
 .menu-bar:hover #menu-body {
+	z-index: 10;
 	display: block;
 }
 #menu-body li {
+	font-family: 'NanumSquareNeo-Variable';
+	margin: 5px 0;
 	font-size: 0.8rem;
-	font-weight: 400;
+	font-weight: 500;
 	position: relative;
+}
+#menu-back {
+	position: absolute;
+	display: flex;
 	width: 100%;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.9);
+	display: none;
+}
+#menu:hover + #menu-back {
+	display: block;
+}
+#menu-back:hover {
+	display: block;
 }
 
 /* main */
 main {
-    min-height: 64vh;
+	margin-top: 12px;
+  	scroll-padding-top: 500px;
 }
 h1 {
     font-size: 3rem;
     font-weight: 900;
 }
-main > div {
+.main-content {
     text-align: center;
     padding: 20px 0;
+	border-radius: 10px;
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+.main-content:hover {
+	z-index: 1000000 !important;
+	transform: scale(1.02);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ABOUT ME */
 #about {
     background-color: #fff7f5;
-	/* background-color: #f2f9fd; */
 }
 .about-content > div {
     width: 230px;
@@ -171,4 +198,67 @@ main > div {
 .about-content > div > i {
     font-size: 2rem;  
     margin-top: auto;
+}
+
+/* RESUME */
+#resume {
+	background-color: #fffefa;
+}
+
+
+
+/* PROJECT */
+#project {
+	background-color: #f2f9fd;
+}
+#project-content {
+	display: flex;
+	justify-content: center;
+}
+#project-info {
+	background-color: white;
+	border-radius: 10px;
+	width: 280px;
+	height: 250px;
+	margin: 15px 8px 10px 8px;
+	padding: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#project-info > a > img {
+	margin: 10px 0;
+	width: 250px;
+	max-height: 200px;
+	object-fit: cover;
+}
+
+/* BLOG */
+#blog {
+	background-color: #fffefa;
+}
+#blog-content {
+	display: flex;
+	justify-content: center;
+}
+#blog-info {
+	background-color: white;
+	border-radius: 10px;
+	width: 350px;
+	height: 270px;
+	margin: 15px 30px 15px 30px;
+	padding: 10px;
+}
+#blog-info > a > img {
+	margin: 10px 0;
+	width: 280px;
+	max-height: 200px;
+	object-fit: cover;
+	padding: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+
+/* CONTACT */
+#contact {
+	background-color: #f7f7f7;
 }
