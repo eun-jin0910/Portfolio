@@ -46,7 +46,7 @@
     /* background-color: #fff9f8; */
 }
 
-header, footer, main {
+header, footer {
 	margin: 10px;
 }
 
@@ -117,8 +117,28 @@ header {
 }
 .menu-bar > li {
     margin: auto;
-    margin-left: 35px;
-    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#menu-bar-last {
+	padding-right: 5px;
+}
+#menu-body {
+	position: absolute;
+ 	top: 100%;
+	display: none;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+} 
+.menu-bar:hover #menu-body {
+	display: block;
+}
+#menu-body li {
+	font-size: 0.8rem;
+	font-weight: 400;
+	position: relative;
+	width: 100%;
 }
 
 /* main */
@@ -135,6 +155,7 @@ main > div {
 }
 #about {
     background-color: #fff7f5;
+	/* background-color: #f2f9fd; */
 }
 .about-content > div {
     width: 230px;
