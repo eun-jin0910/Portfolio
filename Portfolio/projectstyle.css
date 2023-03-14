@@ -1,0 +1,22 @@
+.project-detail-content {
+    background-color: #fbfdff;
+    border-radius: 10px;
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    min-height: 500px;
+    margin: 10px 0;
+    padding: 10px 30px;
+}
+.project-detail-content > h1 {
+    text-align: center;
+}
+.project-info {
+    margin: 30px 10px;
+    max-width: 1000px;
+}
+.project-info > p {
+    font-size: 0.9rem;
+}
+.project-detail-content > div > h2 {
+    margin: 5px 0;
+}
+
