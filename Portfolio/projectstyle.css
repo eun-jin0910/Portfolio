@@ -19,4 +19,16 @@
 .project-detail-content > div > h2 {
     margin: 5px 0;
 }
-
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 920px;
+}
+td {
+    border: 2px solid rgb(240, 240, 240);
+    padding: 3px 5px;
+}
+#attribute {
+    text-align: center;
+    font-weight: 600;
+}

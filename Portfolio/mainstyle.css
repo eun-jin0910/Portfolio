@@ -206,7 +206,7 @@ h1 {
 
 /* techs */
 #techs {
-	background-color: #fffefa;
+	background-color: #f2f9fd;
 }
 #techs-content {
 	display: flex;
@@ -215,20 +215,19 @@ h1 {
 }
 #techs-icon > img {
 	margin: 15px;
-	width: 95px;
+	width: 55px;
 	max-height: 100px;
 	object-fit: cover;
 }
-.front {
-	margin: 0 !important;
-	width: 110px !important;
+.front, #java  {
+	margin: 5px !important;
+	width: 65px !important;
 	max-height: 170px !important;
 }
 
-
 /* project */
 #project {
-	background-color: #f2f9fd;
+	background-color: #fffefa;
 }
 #project-content {
 	display: flex;
