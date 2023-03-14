@@ -7,6 +7,7 @@
     <title>PROJECT</title>
     <link rel="stylesheet" type="text/css" href="mainstyle.css" />
     <link rel="stylesheet" type="text/css" href="projectstyle.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <script src="https://kit.fontawesome.com/367bc8d5b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -93,7 +94,7 @@
                     </div>
                     <div class="project-info" id="project-issue">
                         <h2>💥이슈</h2>
-                        <p>1. 헤더/푸터 분리하여 재사용<br>
+                        <!-- <p>1. 헤더/푸터 분리하여 재사용<br>
                             <table>
                                 <tr>
                                     <td id="attribute">문제</td>
@@ -108,7 +109,24 @@
                                     <td>가독성 증가 및 유지 보수에 용이</td>
                                 </tr>
                             </table>
+                        </p> -->
+
+                        <p>
+                            1. 페이지 헤더와 푸터에 변경되는 사항이 있을 때, 해당 영역을 동일하게 포함하는 모든 파일을 수정해야 하는 문제 발생<br>
+                            > 해결 : 헤더와 푸터를 컴포넌트화 하여, 각각의 파일에 재사용 및 동적 렌더링<br>
+                            > 결과 : 가독성 증가 및 유지 보수에 용이<br><br>
+                            2. View들끼리 직접적으로 연결되어 있어 View와 Controller 사이에 역할과 책임이 명확하게 분리되지 않음<br>
+                            > 해결 : View들끼리의 연결이 서블릿을 통해 이루어지게 로직 변경 및 웹 서블릿 매핑을 통해 URL도 변경<br>
+                            > 결과 : 코드의 복잡성이 줄어들고, 유지보수와 확장성 향상. URL의 일관성과 가독성이 높아짐<br><br>
+                            3. CSR(Client-Side Rendering)로 모든 페이지를 구현하였으나 불필요한 로직과 중복되는 코드로 인해 가독성이 떨어지며, 초기 로딩 속도가 느린 문제 발생<br>
+                            > 해결 : 서버에서 뷰를 렌더링하여 제공하는 SSR(Server-Side Rendering)로 로직 변경<br>
+                            > 결과 : 클라이언트 측에서 처리해야 하는 로직이 줄어들어 가독성 증가 및 초기 로딩 속도 문제 해결
                         </p>
+                    </div>
+                    <div>
+                        <!-- <video controls>
+                            <source src="QnAvideo.mp4" type="video/mp4">
+                         </video> -->
                     </div>
                 </div>
                 <div class="project-detail-content" id="project-QnAGame">
