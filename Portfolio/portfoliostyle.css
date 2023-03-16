@@ -92,6 +92,12 @@ header {
 #menu-bar > ul > li:hover {
 	font-weight: 600;
 }
+.anchor {
+	/* border: 1px solid; */
+	position: relative;
+	z-index: 1000;
+  	top: -80px;
+}
 
 /* main */
 .main-content {
@@ -120,26 +126,47 @@ h1 {
 	background-color: #fff7f5;
 }
 #intro-profile {
+	width: 600px;
 	padding-bottom: 60px;
 }
 #intro-profile > img {
 	width: 300px;
 	padding-bottom: 10px;
 }
-#intro-text-content > span {
+#intro-text-content {
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+}
+#intro-text-content > span, #intro-text-content > span > span {
 	font-size: 2.5rem;
 	color: rgba(0, 0, 0, 0.6);
 	font-family: 'Black Han Sans', sans-serif;
 }
+* {
+	/* border: 1px solid; */
+}
+#intro-text-1 {
+	padding: 0;
+	margin: 0 auto;
+	position: absolute;
+}
+#intro-text-3 {
+	margin-top: 107px;
+}
+#intro-text-2, #intro-text-4 {
+	margin-top: 110px;
+}
 #intro-text-2 {
 	color: rgba(0, 0, 0, 0.8) !important;
 	font-size: 2.8rem !important;
-	margin-right: 5px;
+	margin-right: 8px;
 }
 #intro-text-3 {
 	color: rgba(0, 0, 0, 1) !important;
-	font-size: 3.3rem !important;
-	margin-right: 5px;
+	font-size: 3.0rem !important;
+	margin-right: 9px;
 }
 
 /* about */
@@ -190,7 +217,7 @@ h1 {
 	height: 380px;
 }
 .about-me-info {
-	padding-top: 18px;
+	padding-top: 16px;
 	text-align: center;
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.9);
