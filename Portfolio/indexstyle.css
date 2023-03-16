@@ -2,18 +2,43 @@
 
 @font-face {
 	font-family: 'NanumSquareNeo-Variable';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2')
-		format('woff2');
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-    font-family: 'Nanum Gothic Coding', monospace;
+	font-family: 'NanumSquare';
+	src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+}
+@font-face {
     font-family: 'Noto Sans KR', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Varela Round', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Poppins:wght@800&family=Varela+Round&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+}
+@font-face {
+	font-family: 'Gowun Dodum', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+}
+@font-face {
+	font-family: 'Black Han Sans', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+}
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media ( min-width : 1000px) {
@@ -42,15 +67,8 @@
 }
 
 * {
-	font-family: 'NanumSquareNeo-Variable';
-    /* font-family: 'Noto Sans KR', sans-serif; */
-    /* border: 1px solid;  */
-    /* background-color: #fff9f8; */
+    font-family: 'Noto Sans KR', sans-serif;
 }
-
-/* header, footer {
-	margin: 10px;
-} */
 
 /* 여백 초기화 */
 body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset,
@@ -90,38 +108,192 @@ img, fieldset {
 	border: 0 none;
 }
 
+* {
+	/* border: 1px solid; */
+}
+
 /* header */
 header {
 	text-align: center;
 	top: 0;
-    padding: 5px 0;
-	/* border-bottom: 1px solid #eee; */
 	position: sticky;
 	background-color: white;
 	font-size: 14px;
-	z-index: 10;
 }
 #menu {
-    display: flex;
-	margin: 10px;
-	margin-bottom: 0;
+	display: flex;
+	padding: 10px;
 }
-#menu > a {
-    text-align: center;
+#logo {
+	margin-left: 5px;
 }
 #logo > img {
-    width: 250px;
+	height: 55px;
 }
 #logo > img:hover {
-    content: url(./logo2.png);
+    content: url(./img/logo2.png);
+}
+#menu-bar {
+	display: flex;
+	align-items: flex-end;
+	margin-left: auto;
+}
+#menu-bar > ul {
+	display: flex;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+#menu-bar > ul > li {
+	margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#menu-bar > ul > li:hover {
+	font-weight: 600;
 }
 
-
 /* main */
-main {
-    text-align: center;
-    margin-top: 10px;
-    width: auto;
-    min-height: 1000px;
-    background-color: #f2f9fd;
+.main-content {
+	height: calc(100vh - 80px);
+	display: flex;
+	justify-content: center;
+}
+.content-detail {
+	padding: 30px;
+	width: 100vw;
+	max-width: 1000px;
+	height: calc(100vh - 140px);
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+	margin-bottom: 10px;
+}
+
+/* intro */
+#intro {
+	background-color: #fff7f5;
+}
+#intro-profile {
+	padding-bottom: 60px;
+}
+#intro-profile > img {
+	width: 300px;
+	padding-bottom: 10px;
+}
+#intro-text-content > span {
+	font-size: 2.5rem;
+	color: rgba(0, 0, 0, 0.6);
+	font-family: 'Black Han Sans', sans-serif;
+}
+#intro-text-2 {
+	color: rgba(0, 0, 0, 0.8) !important;
+	font-size: 2.8rem !important;
+	margin-right: 5px;
+}
+#intro-text-3 {
+	color: rgba(0, 0, 0, 1) !important;
+	font-size: 3.3rem !important;
+	margin-right: 5px;
+}
+
+/* about */
+#about {
+	background-color: #fffcf3;
+	/* background-color: #fdc010; */
+}
+#about-page {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.about-content {
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 10px 0;
+	border-radius: 15px;
+	margin-bottom: 25px;
+}
+.about-content-info {
+	display: inline-block;
+}
+.about-content-info-div {
+	width: 230px;
+    margin: 5px 0;
+    padding: 20px 0;
+	padding-left: 60px;
+    display: flex;
+}
+#about-i {
+	height: 50px;
+	width: 55px;
+}
+#about-i > i {
+	margin-right: 15px;
+	padding-top: 5px;
+	font-size: 2rem;  
+    margin-top: auto;
+}
+#about-info {
+	text-align: left;
+	font-size: 0.9rem;
+}
+#about-info-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+#about-2 {
+	height: 380px;
+}
+.about-keyword {
+	display: flex;
+	justify-content: center;
+	
+}
+.about-keyword > div {
+	margin: 20px;
+	background-color: #e4d5e9;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8rem;
+	font-family: 'SBAggroB' !important;
+}
+
+/* project */
+#project {
+	background-color: #c1f4e6;
+}
+#project-page {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.project-content {
+	height: calc(100vh - 280px);
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	padding: 25px 0;
+	border-radius: 15px;
+	margin-bottom: 25px;
+}
+#project-title {
+	font-size: 2rem;
+	font-weight: 900;
+}
+#project-info {
+	display: flex;
+	margin: 20px;
+}
+#project-info-img > img {
+	width: 500px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	margin-right: 20px;
 }
