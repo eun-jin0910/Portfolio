@@ -1,5 +1,19 @@
 @charset "utf-8";
 
+@media ( min-width : 1000px) {
+
+}
+
+@media ( max-width : 1000px) {
+	.comtainer {
+		position: absolute;
+	}
+	.content-detail {
+		position: absolute;
+		transform: scale(0.8);
+	}
+}
+
 @font-face {
 	font-family: 'NanumSquareNeo-Variable';
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
@@ -218,9 +232,12 @@ h1 {
     font-weight: 600;
     margin-bottom: 5px;
 }
+* {
+	/* border: 1px solid; */
+}
 #about-2 {
-	padding-bottom: 40px;
-	/* max-height: 370px; */
+	padding-bottom: 35px;
+	max-height: 360px;
 }
 .about-me-info {
 	padding-top: 16px;
@@ -230,12 +247,12 @@ h1 {
 	width: 430px;
 }
 .about-me-info > h1 {
-	font-family: 'NanumSquareNeo-Variable';
-	font-size: 1.5rem;
+	/* font-family: 'NanumSquareNeo-Variable'; */
+	font-size: 1.6rem;
 }
 .about-me-info > img {
-	margin-top: 15px;
-	margin-bottom: 10px;
+	margin-top: 13px;
+	margin-bottom: 5px;
 	height: 280px;
 }
 #about-me-mbti > img {
@@ -267,9 +284,6 @@ h1 {
 	margin: 20px;
 	padding: 20px;
 }
-* {
-	/* border: 1px solid; */
-}
 #project-info-1 {
 	display: flex;
 	margin: 20px;
@@ -278,12 +292,16 @@ h1 {
 #project-info-img {
 	align-items: center;
 }
-#project-info-img > img {
+#project-img {
 	width: 430px;
 	border-radius: 4px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	margin-top: 20px;
 	margin-right: 30px;
+}
+#project-img:hover {
+	transform: scale(1.02);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 #show-link {
 	display: flex;
