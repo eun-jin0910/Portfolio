@@ -16,7 +16,9 @@
 }
 @font-face {
 	font-family: 'Black Han Sans', sans-serif;
-	src: url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+	src: url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'),
+		url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400'),
+		url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
 }
 @font-face {
     font-family: 'SBAggroB';
@@ -60,6 +62,7 @@ header {
 	position: sticky;
 	background-color: white;
 	font-size: 14px;
+	z-index: 100;
 }
 #menu {
 	display: flex;
@@ -93,7 +96,6 @@ header {
 	font-weight: 600;
 }
 .anchor {
-	/* border: 1px solid; */
 	position: relative;
 	z-index: 1000;
   	top: -80px;
@@ -139,13 +141,15 @@ h1 {
 	justify-content: center;
 	align-items: center;
 }
-#intro-text-content > span, #intro-text-content > span > span {
+#intro-text-content > span {
 	font-size: 2.5rem;
 	color: rgba(0, 0, 0, 0.6);
-	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Black Han Sans', sans-serif !important;
 }
-* {
-	/* border: 1px solid; */
+#intro-text-content > span > span {
+	font-size: 2.5rem;
+	color: rgba(0, 0, 0, 0.6);
+	font-family: 'Black Han Sans', sans-serif !important;
 }
 #intro-text-1 {
 	padding: 0;
@@ -214,7 +218,8 @@ h1 {
     margin-bottom: 5px;
 }
 #about-2 {
-	height: 380px;
+	padding-bottom: 30px;
+	max-height: 350px;
 }
 .about-me-info {
 	padding-top: 16px;
@@ -222,7 +227,6 @@ h1 {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 430px;
-	height: 350px;
 }
 .about-me-info > h1 {
 	font-family: 'NanumSquareNeo-Variable';
@@ -230,7 +234,10 @@ h1 {
 }
 .about-me-info > img {
 	margin-top: 15px;
-	height: 280px;
+	height: 272px;
+}
+#about-me-mbti > img {
+	padding-left: 5px;
 }
 
 /* project */
@@ -246,7 +253,7 @@ h1 {
 	height: calc(100vh - 310px);
 	background-color: rgba(255, 255, 255, 0.9);
 	margin-top: 5px;
-	padding: 30px 10px 20px 10px;
+	padding: 20px 10px 20px 10px;
 	border-radius: 15px;
 }
 #project-title {
@@ -256,7 +263,7 @@ h1 {
 #project-info {
 	display: flex;
 	margin: 20px;
-	margin-top: 30px;
+	margin-top: 10px;
 	padding: 20px;
 }
 #project-info-img {
@@ -269,8 +276,14 @@ h1 {
 	margin-top: 20px;
 	margin-right: 30px;
 }
+#show-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 130px;
+}
 #show-more {
-	margin: 10px 170px;
+	margin: 10px 163px;
 	padding: 3px 0;
 	display: flex;
 	justify-content: center;
@@ -280,12 +293,31 @@ h1 {
 	border-radius: 25px;
 	background-color: #b0edda;
 }
-#show-more > a {
+#show-more-1 {
+	padding: 3px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90px;
+	height: 30px;
+	border-radius: 25px;
+	background-color: #b0edda;
+}
+#show-more > a, #show-more-1 > a  {
 	font-family: 'NanumSquareNeo-Variable';
 	color: white;
 }
-#show-more:hover {
+#show-more:hover, #show-more-1:hover {
 	background-color: #48cca3;
+}
+#github-link > a > img {
+	width: 30px;
+	padding-top: 3px;
+	margin: 0 10px;
+	opacity: 0.5;
+}
+#github-link > a > img:hover {
+	opacity: 1;
 }
 #project-info-text {
 	text-align: left;
