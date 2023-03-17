@@ -10,22 +10,7 @@
 	font-family: 'NanumSquare';
 	src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 }
-@font-face {
-    font-family: 'Noto Sans KR', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-}
-@font-face {
-	font-family: 'Black Han Sans', sans-serif;
-	src: url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'),
-		url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400'),
-		url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
-}
-@font-face {
-    font-family: 'SBAggroB';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 * {
     font-family: 'Noto Sans KR', sans-serif;
 }
