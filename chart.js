@@ -7,7 +7,7 @@ const myChart = new Chart(ctx, {
         labels: ["외향성(E)", "감각(S)", "느낌(F)", "판단(J)", "내향성(I)", "직감(N)", "생각(T)", "인식(P)"],
         datasets: [
             {
-                data: [39, 65, 44, 70, 61, 38, 56, 30],
+                data: [39, 62, 36, 69, 61, 38, 64, 31],
                 backgroundColor: ["rgba(176, 157, 203, 0.1)"],
                 borderColor: ["rgba(176, 157, 203, 1)"],
                 borderWidth: 1,

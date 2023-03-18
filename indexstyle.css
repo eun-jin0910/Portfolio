@@ -145,9 +145,6 @@ h1 {
 #intro-text-content {
 	height: 50px;
 	display: block;
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
 }
 #intro-text-content > span {
 	display: flex;
@@ -161,9 +158,6 @@ h1 {
 	color: rgba(0, 0, 0, 0.6);
 	font-family: 'Black Han Sans', sans-serif !important;
 }
-* {
-	/* border: 1px solid; */
-}
 #intro-text-span-1 {
 	min-width: 535px;
 }
@@ -176,6 +170,7 @@ h1 {
 	padding: 0;
 	margin: 0 auto;
 	position: absolute;
+	letter-spacing: -0.05rem;
 }
 #intro-text-2 {
 	margin-top: 47px;
@@ -196,6 +191,23 @@ h1 {
 	font-size: 3.0rem !important;
 	margin-right: 10px;
 }
+* {
+	/* border: 1px solid; */
+}
+#under-line {
+	width: 395px;
+	height: 15px;
+	background-color: #3853a4;
+	opacity: 0.2;
+	z-index: -1;
+	margin-left: 45px;
+	margin-top: 38px;
+	position: absolute;
+	border-radius: 0.9rem;
+}
+
+
+
 #intro-profile {
 	opacity: 0; 
 	animation-name: fade-in;
@@ -236,9 +248,6 @@ h1 {
 	margin-bottom: 25px;
 	max-height: 340px;
 }
-* {
-	/* border: 1px solid; */
-}
 .about-content > div {
 	display: flex;
 	justify-content: center;
@@ -273,17 +282,19 @@ h1 {
     margin-bottom: 5px;
 }
 #about-2 {
-	max-height: 360px;
+	margin-bottom: 0;
+	padding-bottom: 30px;
 }
 .about-me {
+	height: 380px;
 	display: flex;
 	justify-content: center;
 	padding-top: 10px;
 }
 .about-me-info {
+	background-color: rgba(255, 255, 255, 0.9);
 	display: inline-block;
 	margin-bottom: auto;
-	background-color: rgba(255, 255, 255, 0.9);
 	width: 440px;
 	max-height: 340px;
 }
@@ -300,12 +311,12 @@ h1 {
 	margin-top: 0;
 	max-height: 315px;
 }
-#myChart {
-	margin-left: 6px;
+#about-me-mbti {
+	margin-left: 5px;
 }
 #chart-skills {
-	margin-top: 15px;
-	max-height: 250px !important;
+	margin-top: 20px;
+	max-height: 240px !important;
 	margin-right: 35px;
 }
 
