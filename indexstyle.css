@@ -149,14 +149,13 @@ h1 {
 #intro-text-content > span {
 	display: flex;
 	justify-content: center;
-	font-size: 2.5rem;
-	color: rgba(0, 0, 0, 0.6);
-	font-family: 'Black Han Sans', sans-serif !important;
 }
 #intro-text-content > span > span {
 	font-size: 2.5rem;
 	color: rgba(0, 0, 0, 0.6);
 	font-family: 'Black Han Sans', sans-serif !important;
+	display: inline-block;
+	overflow: hidden;
 }
 #intro-text-span-1 {
 	min-width: 535px;
@@ -174,40 +173,30 @@ h1 {
 }
 #intro-text-2 {
 	margin-top: 47px;
-}
-#intro-text-3 {
-	margin-top: 44px;
-}
-#intro-text-4 {
-	margin-top: 51px;
-}
-#intro-text-2 {
 	color: rgba(0, 0, 0, 0.8) !important;
 	font-size: 2.8rem !important;
 	margin-right: 8px;
 }
 #intro-text-3 {
+	margin-top: 44px;
 	color: rgba(0, 0, 0, 1) !important;
 	font-size: 3.0rem !important;
-	margin-right: 10px;
+	margin-right: 11px;
 }
-* {
-	/* border: 1px solid; */
+#intro-text-4 {
+	margin-top: 51px;
 }
 #under-line {
-	width: 395px;
+	width: 392px;
 	height: 15px;
 	background-color: #3853a4;
-	opacity: 0.2;
-	z-index: -1;
+	z-index: -10;
 	margin-left: 45px;
 	margin-top: 38px;
 	position: absolute;
 	border-radius: 0.9rem;
+	opacity: 0;
 }
-
-
-
 #intro-profile {
 	opacity: 0; 
 	animation-name: fade-in;
@@ -229,6 +218,16 @@ h1 {
 	}
 	to {
 		opacity: 0;
+	}
+}
+@keyframes underline {
+	from {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+	to {
+		opacity: 0.3;
+		transform: translateX(0);
 	}
 }
 
@@ -316,6 +315,7 @@ h1 {
 }
 #chart-skills {
 	margin-top: 20px;
+	min-height: 100px;
 	max-height: 240px !important;
 	margin-right: 35px;
 }
