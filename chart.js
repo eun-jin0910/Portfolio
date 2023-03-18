@@ -18,12 +18,6 @@ const myChart = new Chart(ctx, {
         ],
     },
     options: {
-        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
-        onHover: (event, chartElement) => {
-            if (chartElement.length > 0) {
-              myChart.update();
-            }
-        },
         responsive: true,
         plugins: {
             legend: {
@@ -102,12 +96,6 @@ const myChart2 = new Chart(ctx2, {
         ],
     },
     options: {
-        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
-        onHover: (event, chartElement) => {
-            if (chartElement.length > 0) {
-              myChart.update();
-            }
-        },
         indexAxis: 'y',
         plugins: {
             legend: {

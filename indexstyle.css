@@ -7,6 +7,11 @@
 }
 
 @media ( max-width : 600px) {
+	.main-content {
+		display: flex;
+		justify-content: center;
+		flex-direction: nowrap;
+	}
 	.comtainer {
 		position: absolute;
 	}
@@ -184,10 +189,18 @@ h1 {
 }
 @keyframes fade-in {
 	from {
-	  opacity: 0;
+		opacity: 0;
 	}
 	to {
-	  opacity: 1;
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }
 
@@ -205,6 +218,14 @@ h1 {
 	padding: 15px 0;
 	border-radius: 15px;
 	margin-bottom: 25px;
+	max-height: 340px;
+}
+* {
+	/* border: 1px solid; */
+}
+.about-content > div {
+	display: flex;
+	justify-content: center;
 }
 .about-content-info {
 	display: inline-block;
@@ -256,7 +277,6 @@ h1 {
 #about-me-mbti > h1 {
 	margin-bottom: 0;
 }
-
 #chart {
 	display: flex;
 	justify-content: center;
@@ -269,11 +289,8 @@ h1 {
 }
 #chart-skills {
 	margin-top: 15px;
-	height: 250px !important;
+	max-height: 250px !important;
 	margin-right: 35px;
-}
-* {
-	/* border: 1px solid; */
 }
 
 /* project */

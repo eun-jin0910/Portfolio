@@ -21,3 +21,18 @@ nextBtn.addEventListener('click', (event) => {
     slides.style.transform = `translateX(-${slideIndex * 33.33}%)`;
 });
 
+// let intro = document.getElementById("intro");
+// let about = document.getElementById("about");
+
+// window.addEventListener("scroll", function() {
+//     let value = window.scrollY;
+//     console.log("scrollY", value);
+
+//     if (value < 400) {
+//         about.style.animation ='fade-out 0s ease-out forwards';
+//     } else if (value < 1300) {
+//         about.style.animation ='fade-in 1s ease-out';
+//     } else {
+//         about.style.animation ='fade-out 2s ease-out forwards';
+//     }
+// });
