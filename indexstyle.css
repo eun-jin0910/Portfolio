@@ -143,12 +143,15 @@ h1 {
 	padding-bottom: 10px;
 }
 #intro-text-content {
-	display: flex;
 	height: 50px;
+	display: block;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
 }
 #intro-text-content > span {
+	display: flex;
+	justify-content: center;
 	font-size: 2.5rem;
 	color: rgba(0, 0, 0, 0.6);
 	font-family: 'Black Han Sans', sans-serif !important;
@@ -158,17 +161,23 @@ h1 {
 	color: rgba(0, 0, 0, 0.6);
 	font-family: 'Black Han Sans', sans-serif !important;
 }
+* {
+	/* border: 1px solid; */
+}
 #intro-text-1 {
 	width: auto;
 	padding: 0;
 	margin: 0 auto;
 	position: absolute;
 }
-#intro-text-3 {
-	margin-top: 107px;
+#intro-text-2 {
+	margin-top: 47px;
 }
-#intro-text-2, #intro-text-4 {
-	margin-top: 110px;
+#intro-text-3 {
+	margin-top: 44px;
+}
+#intro-text-4 {
+	margin-top: 51px;
 }
 #intro-text-2 {
 	color: rgba(0, 0, 0, 0.8) !important;
@@ -178,7 +187,7 @@ h1 {
 #intro-text-3 {
 	color: rgba(0, 0, 0, 1) !important;
 	font-size: 3.0rem !important;
-	margin-right: 9px;
+	margin-right: 10px;
 }
 #intro-profile {
 	opacity: 0; 
