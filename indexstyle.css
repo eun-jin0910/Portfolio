@@ -245,28 +245,35 @@ h1 {
 }
 .about-me-info {
 	display: inline-block;
-	text-align: center;
-	margin-top: 0;
 	margin-bottom: auto;
 	background-color: rgba(255, 255, 255, 0.9);
-	width: 430px;
+	width: 440px;
 	max-height: 340px;
 }
 .about-me-info > h1 {
-	/* font-family: 'NanumSquareNeo-Variable'; */
 	font-size: 1.6rem;
 }
-.about-me-info > img {
-	margin-top: 5px;
-	height: 300px;
+#about-me-mbti > h1 {
+	margin-bottom: 0;
 }
+
 #chart {
 	display: flex;
 	justify-content: center;
 	padding: 0;
 	margin-top: 0;
+	max-height: 315px;
+}
+#myChart {
 	margin-left: 6px;
-	max-height: 300px;
+}
+#chart-skills {
+	margin-top: 15px;
+	height: 250px !important;
+	margin-right: 35px;
+}
+* {
+	/* border: 1px solid; */
 }
 
 /* project */

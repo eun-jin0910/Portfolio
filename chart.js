@@ -18,6 +18,12 @@ const myChart = new Chart(ctx, {
         ],
     },
     options: {
+        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+        onHover: (event, chartElement) => {
+            if (chartElement.length > 0) {
+              myChart.update();
+            }
+        },
         responsive: true,
         plugins: {
             legend: {
@@ -37,7 +43,6 @@ const myChart = new Chart(ctx, {
                 pointLabels: {
                     font: {
                         family: 'NanumSquareNeo-Variable',
-                        // size: 16,
                         size: function (context) {
                             var index = context.index;
                             if (index === 1 || index === 3 || index === 4 || index === 6) {
@@ -70,6 +75,70 @@ const myChart = new Chart(ctx, {
             beginAtZero: true,
             stepSize: 50,
         },
+    },
+});
+
+const chart2 = document.getElementById("chart-skills");
+const ctx2 = document.getElementById("chart-skills").getContext("2d");
+const myChart2 = new Chart(ctx2, {
+    type: "bar",
+    data: {
+        labels: ["Java", "MySQL", "HTML5", "CSS3", "Javascript", "GitHub"],
+        datasets: [
+            {
+                data: [65, 50, 55, 45, 45, 40],
+                backgroundColor: [
+                    "rgba(176, 157, 203, 0.8)",
+                    "rgba(176, 157, 203, 0.5)",
+                    "rgba(176, 157, 203, 0.7)",
+                    "rgba(176, 157, 203, 0.5)",
+                    "rgba(176, 157, 203, 0.5)",
+                    "rgba(176, 157, 203, 0.4)"
+                ],
+                borderColor: ["rgba(176, 157, 203, 1)"],
+                borderWidth: 1,
+                borderRadius: 3
+            },
+        ],
+    },
+    options: {
+        events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+        onHover: (event, chartElement) => {
+            if (chartElement.length > 0) {
+              myChart.update();
+            }
+        },
+        indexAxis: 'y',
+        plugins: {
+            legend: {
+                display: false,
+            }
+        },
+        scales: {
+            r: {
+                ticks: {
+                    display: false,
+                }
+            },
+            x: {
+                max: 100,
+                ticks: {
+                    font: {
+                        size: 10
+                    }
+                }
+            }
+        },
+        ticks: {
+            stepSize: 20,
+            beginAtZero: false,
+            font: {
+                family: 'NanumSquareNeo-Variable',
+                size: 12,
+                weight: 'bold'
+            }
+        },
+        barThickness: 17,
     },
 });
 console.clear();
