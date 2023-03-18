@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
-    <link rel="stylesheet" type="text/css" href="./portfoliostyle.css" />
+    <link rel="stylesheet" type="text/css" href="./indexstyle.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/367bc8d5b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -95,14 +96,14 @@
                         <div class="about-me">
                             <div class="about-me-info" id="about-me-keyword">
                                 <h1>TECHS</h1>
-
                                 <img src="./img/techs.png" alt="">
-
                             </div>
                             <div class="about-me-info" id="about-me-mbti">
                                 <h1>CHARACTER</h1>
-                                <img src="./img/mbti.png" alt="">
-
+                                <!-- <img src="./img/mbti.png" alt=""> -->
+                                <div id="chart">
+                                    <canvas id="myChart"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
                                         </div>
                                         <div class="project-info-detail" id="project-function">
                                             <h2>📚 주요기능</h2>
-                                            <p>- 운동 종목 및 지역별로 운동센터 및 트레이너 검색<br>
+                                            <p>- 운동 종목 및 지역별로 운동 센터 및 트레이너 검색<br>
                                                 - 마음에 드는 센터 및 트레이너에게 레슨 견적 요청<br>
                                                 - 트레이너와 매칭 서비스<br>
                                             </p>
@@ -290,5 +291,6 @@
         </footer>
     </div>
 </body>
-<script src="./portfolio.js"></script>
+<script src="./index.js"></script>
+<script src="./chart.js"></script>
 </html>

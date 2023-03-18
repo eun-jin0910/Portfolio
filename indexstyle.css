@@ -1,10 +1,12 @@
 @charset "utf-8";
 
 @media ( min-width : 1000px) {
-
 }
 
 @media ( max-width : 1000px) {
+}
+
+@media ( max-width : 600px) {
 	.comtainer {
 		position: absolute;
 	}
@@ -62,6 +64,7 @@ header {
 	background-color: white;
 	font-size: 14px;
 	z-index: 100;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 }
 #menu {
 	display: flex;
@@ -232,31 +235,38 @@ h1 {
     font-weight: 600;
     margin-bottom: 5px;
 }
-* {
-	/* border: 1px solid; */
-}
 #about-2 {
-	padding-bottom: 35px;
 	max-height: 360px;
 }
+.about-me {
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
 .about-me-info {
-	padding-top: 16px;
-	text-align: center;
 	display: inline-block;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: auto;
 	background-color: rgba(255, 255, 255, 0.9);
 	width: 430px;
+	max-height: 340px;
 }
 .about-me-info > h1 {
 	/* font-family: 'NanumSquareNeo-Variable'; */
 	font-size: 1.6rem;
 }
 .about-me-info > img {
-	margin-top: 13px;
-	margin-bottom: 5px;
-	height: 280px;
+	margin-top: 5px;
+	height: 300px;
 }
-#about-me-mbti > img {
-	padding-left: 5px;
+#chart {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-top: 0;
+	margin-left: 6px;
+	max-height: 300px;
 }
 
 /* project */
