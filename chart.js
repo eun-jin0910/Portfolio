@@ -12,7 +12,7 @@ function makeMyChart() {
             labels: ["외향성(E)", "감각(S)", "느낌(F)", "판단(J)", "내향성(I)", "직감(N)", "생각(T)", "인식(P)"],
             datasets: [
                 {
-                    data: [39, 62, 36, 69, 61, 38, 64, 31],
+                    data: [41, 62, 36, 62, 59, 38, 64, 38],
                     backgroundColor: ["rgba(176, 157, 203, 0.1)"],
                     borderColor: ["rgba(176, 157, 203, 1)"],
                     borderWidth: 1,
@@ -35,7 +35,7 @@ function makeMyChart() {
             scales: {
                 r: {
                     min: 0,
-                    max: 100,
+                    max: 90,
                     ticks: {
                         display: false,
                     },
@@ -72,7 +72,7 @@ function makeMyChart() {
             },
             ticks: {
                 beginAtZero: true,
-                stepSize: 50,
+                stepSize: 45,
             },
         },
     });
@@ -86,14 +86,14 @@ function makeChartSkills() {
             labels: ["Java", "MySQL", "HTML5", "CSS3", "Javascript", "GitHub"],
             datasets: [
                 {
-                    data: [65, 50, 55, 50, 45, 40],
+                    data: [80, 60, 65, 60, 55, 50],
                     backgroundColor: [
                         "rgba(176, 157, 203, 0.8)",
-                        "rgba(176, 157, 203, 0.5)",
+                        "rgba(176, 157, 203, 0.6)",
+                        "rgba(176, 157, 203, 0.6)",
                         "rgba(176, 157, 203, 0.6)",
                         "rgba(176, 157, 203, 0.5)",
-                        "rgba(176, 157, 203, 0.4)",
-                        "rgba(176, 157, 203, 0.4)"
+                        "rgba(176, 157, 203, 0.5)"
                     ],
                     borderColor: "rgba(176, 157, 203, 1)",
                     borderWidth: 1,

@@ -95,10 +95,14 @@ setTimeout(typingEffect1, 800);
 function smoothScroll(event) {
     event.preventDefault();
     const target = event.target.getAttribute('href');
+    console.log("target", target);
     const element = document.querySelector(target);
-    element.scrollIntoView({
-        behavior: 'smooth'
-    });
+    console.log("element", element);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 }
 
 // 페이지 스크롤 효과
@@ -111,31 +115,15 @@ function scrollHandler() {
     const header = document.querySelector('header').offsetHeight;
     let screenHeight = windowHeight - header;
     if (screenHeight > 500) {
-        if (500 <= scrollPosition && scrollPosition <= screenHeight + 25) {
-            window.location.href = "#about-anchor";
-            var element = document.querySelector("#about-anchor");
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
+        if (500 <= scrollPosition && scrollPosition <= screenHeight) {
+            window.scrollTo({ top: screenHeight, behavior: 'auto' });
             document.getElementById("profile-img").src = "./img/before.png";
-        } else if (screenHeight + 500 <= scrollPosition && scrollPosition <= screenHeight * 2 + 25) {
-            window.location.href = "#project-anchor";
-            var element = document.querySelector("#project-anchor");
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition <= screenHeight * 3 + 25) {
-            window.location.href = "#blog-anchor";
-            var element = document.querySelector("#blog-anchor");
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
-        } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition <= screenHeight * 4 + 25) {
-            window.location.href = "#contact-anchor";
-            var element = document.querySelector("#contact-anchor");
-            element.scrollIntoView({
-                behavior: 'smooth'
-            });
+        } else if (screenHeight + 500 <= scrollPosition && scrollPosition <= screenHeight * 2) {
+            window.scrollTo({ top: screenHeight * 2, behavior: 'auto' });
+        } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition <= screenHeight * 3) {
+            window.scrollTo({ top: screenHeight * 3, behavior: 'auto' });
+        } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition <= screenHeight * 4) {
+            window.scrollTo({ top: screenHeight * 4, behavior: 'auto' });
         }
     }
 }
@@ -152,6 +140,5 @@ window.addEventListener('scroll', function () {
 // top 버튼
 const topBtn = document.getElementById("top-btn");
 topBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
