@@ -457,6 +457,9 @@ h1 {
   margin: 20px;
   padding: 20px;
 }
+.project-info-ohgym {
+  padding-top: 0 !important;
+}
 #project-info-1 {
   display: flex;
   margin: 20px;
