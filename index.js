@@ -88,6 +88,7 @@ function imgChange() {
     const profileImg = document.getElementById("profile-img");
     profileImg.src = "./img/after.png";
 }
+
 setTimeout(typingEffect1, 800);
 
 // 메뉴바 클릭시 스크롤 부드럽게 이동
@@ -110,26 +111,26 @@ function scrollHandler() {
     const header = document.querySelector('header').offsetHeight;
     let screenHeight = windowHeight - header;
     if (screenHeight > 500) {
-        if (500 <= scrollPosition && scrollPosition < screenHeight) {
+        if (500 <= scrollPosition && scrollPosition <= screenHeight + 25) {
             window.location.href = "#about-anchor";
             var element = document.querySelector("#about-anchor");
             element.scrollIntoView({
                 behavior: 'smooth'
             });
             document.getElementById("profile-img").src = "./img/before.png";
-        } else if (screenHeight + 500 <= scrollPosition && scrollPosition < screenHeight * 2) {
+        } else if (screenHeight + 500 <= scrollPosition && scrollPosition <= screenHeight * 2 + 25) {
             window.location.href = "#project-anchor";
             var element = document.querySelector("#project-anchor");
             element.scrollIntoView({
                 behavior: 'smooth'
             });
-        } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition < screenHeight * 3) {
+        } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition <= screenHeight * 3 + 25) {
             window.location.href = "#blog-anchor";
             var element = document.querySelector("#blog-anchor");
             element.scrollIntoView({
                 behavior: 'smooth'
             });
-        } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition < screenHeight * 4) {
+        } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition <= screenHeight * 4 + 25) {
             window.location.href = "#contact-anchor";
             var element = document.querySelector("#contact-anchor");
             element.scrollIntoView({
@@ -151,6 +152,6 @@ window.addEventListener('scroll', function () {
 // top 버튼
 const topBtn = document.getElementById("top-btn");
 topBtn.addEventListener("click", () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 });
