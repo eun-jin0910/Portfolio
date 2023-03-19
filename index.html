@@ -20,13 +20,13 @@
     <div class="container">
         <header>
             <div id="menu">
-                <a href="./portfolio.html" id="logo"><img src="./img/logo.png" alt=""></a>
+                <a href="#" onclick="location.reload()" id="logo"><img src="./img/logo.png" alt=""></a>
                 <div id="menu-bar">
                     <ul>
-                        <li><a id="about-link" href="#about-anchor">ABOUT</a></li>
-                        <li><a id="project-link" href="#project-anchor">PROJECT</a></li>
-                        <li><a id="blog-link" href="#blog-anchor">BLOG</a></li>
-                        <li><a id="contact-link" href="#contact-anchor">CONTACT</a></li>
+                        <li><a id="about-link" href="#about-anchor" onclick="smoothScroll(event)">ABOUT</a></li>
+                        <li><a id="project-link" href="#project-anchor" onclick="smoothScroll(event)">PROJECT</a></li>
+                        <li><a id="blog-link" href="#blog-anchor" onclick="smoothScroll(event)">BLOG</a></li>
+                        <li><a id="contact-link" href="#contact-anchor" onclick="smoothScroll(event)">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div id="intro-anchor" class="anchor"></div>
                 <div id="intro-page" class="content-detail">
                     <div id="intro-profile">
-                        <img src="./img/profile.png" alt="">
+                        <img id="profile-img" src="./img/before.png" alt="">
                         <div id="intro-text">
                             <p id="intro-text-content">
                                 <span id="intro-text-span-1">
@@ -82,7 +82,7 @@
                             <div class="about-content-info">
                                 <div class="about-content-info-div">
                                     <span id="about-i"><i class="fa-solid fa-phone"></i></span>
-                                    <span id="about-info"><p id="about-info-title">연락처</p><p>010-8914-8761</p></span>
+                                    <span id="about-info"><p id="about-info-title">연락처</p><p><a href="tel:010-8914-8761">010-8914-8761</a></p></span>
                                 </div>
                             </div>
                             <div class="about-content-info">
@@ -102,7 +102,7 @@
                     <div class="about-content" id="about-2">
                         <div class="about-me">
                             <div class="about-me-info" id="about-me-keyword">
-                                <h1>TECHS</h1>
+                                <h1>SKILLS</h1>
                                 <div id="chart" class="chart-skills">
                                     <canvas id="chart-skills"  width="70" height="50"></canvas>
                                 </div>
@@ -296,6 +296,7 @@
             </div>
         </main>
         <footer>
+            <button id="top-btn">TOP</button>
         </footer>
     </div>
 </body>

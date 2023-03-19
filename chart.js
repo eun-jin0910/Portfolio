@@ -86,13 +86,13 @@ function makeChartSkills() {
             labels: ["Java", "MySQL", "HTML5", "CSS3", "Javascript", "GitHub"],
             datasets: [
                 {
-                    data: [65, 50, 55, 45, 45, 40],
+                    data: [65, 50, 55, 50, 45, 40],
                     backgroundColor: [
                         "rgba(176, 157, 203, 0.8)",
                         "rgba(176, 157, 203, 0.5)",
-                        "rgba(176, 157, 203, 0.7)",
+                        "rgba(176, 157, 203, 0.6)",
                         "rgba(176, 157, 203, 0.5)",
-                        "rgba(176, 157, 203, 0.5)",
+                        "rgba(176, 157, 203, 0.4)",
                         "rgba(176, 157, 203, 0.4)"
                     ],
                     borderColor: "rgba(176, 157, 203, 1)",

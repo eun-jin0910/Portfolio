@@ -1,3 +1,4 @@
+// 슬라이더
 const slides = document.querySelector(".slides");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
@@ -21,6 +22,7 @@ nextBtn.addEventListener('click', (event) => {
     slides.style.transform = `translateX(-${slideIndex * (100 / slides.children.length)}%)`;
 });
 
+// 타이핑 효과
 var typingText1 = "지속적인 학습과 열정으로 성장하는 ".split('');
 var typingText2 = "백엔드 개발자,".split('');
 var typingText3 = "이은진".split('');
@@ -72,14 +74,83 @@ function typingEffect4() {
         span4.textContent = typingResult4;
         setTimeout(typingEffect4, 70);
     } else {
-        setTimeout(uncerlineDraw, 10);
+        setTimeout(underlineDraw, 10);
     }
 }
 
 const underline = document.getElementById("under-line");
-function uncerlineDraw() {
+function underlineDraw() {
     underline.style.animation = 'underline 1s ease-out forwards';
+    setTimeout(imgChange, 80);
 }
 
-typingEffect1();
+function imgChange() {
+    const profileImg = document.getElementById("profile-img");
+    profileImg.src = "./img/after.png";
+}
+setTimeout(typingEffect1, 800);
 
+// 메뉴바 클릭시 스크롤 부드럽게 이동
+function smoothScroll(event) {
+    event.preventDefault();
+    const target = event.target.getAttribute('href');
+    const element = document.querySelector(target);
+    element.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+// 페이지 스크롤 효과
+function scrollHandler() {
+    // 현재 스크롤 위치
+    const scrollPosition = window.scrollY || window.pageYOffset || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+    // 현재 뷰포트 높이
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    const header = document.querySelector('header').offsetHeight;
+    let screenHeight = windowHeight - header;
+    if (screenHeight > 500) {
+        if (500 <= scrollPosition && scrollPosition < screenHeight) {
+            window.location.href = "#about-anchor";
+            var element = document.querySelector("#about-anchor");
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+            document.getElementById("profile-img").src = "./img/before.png";
+        } else if (screenHeight + 500 <= scrollPosition && scrollPosition < screenHeight * 2) {
+            window.location.href = "#project-anchor";
+            var element = document.querySelector("#project-anchor");
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition < screenHeight * 3) {
+            window.location.href = "#blog-anchor";
+            var element = document.querySelector("#blog-anchor");
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition < screenHeight * 4) {
+            window.location.href = "#contact-anchor";
+            var element = document.querySelector("#contact-anchor");
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+
+let prevScrollpos = window.scrollY;
+window.addEventListener('scroll', function () {
+    let currentScrollPos = window.scrollY;
+    if (prevScrollpos < currentScrollPos) {
+        scrollHandler();
+    }
+    prevScrollpos = currentScrollPos;
+});
+
+// top 버튼
+const topBtn = document.getElementById("top-btn");
+topBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
