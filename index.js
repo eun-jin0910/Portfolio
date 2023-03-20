@@ -114,14 +114,13 @@ function scrollHandler() {
     let screenHeight = windowHeight - header;
     if (screenHeight > 500) {
         if (500 <= scrollPosition && scrollPosition <= screenHeight) {
-            window.scrollTo({ top: screenHeight, behavior: 'smooth' });
-            document.getElementById("profile-img").src = "./img/before.png";
+            window.scrollTo({ top: screenHeight});
         } else if (screenHeight + 500 <= scrollPosition && scrollPosition <= screenHeight * 2) {
-            window.scrollTo({ top: screenHeight * 2, behavior: 'smooth' });
+            window.scrollTo({ top: screenHeight * 2});
         } else if (screenHeight * 2 + 500 <= scrollPosition && scrollPosition <= screenHeight * 3) {
-            window.scrollTo({ top: screenHeight * 3, behavior: 'smooth' });
+            window.scrollTo({ top: screenHeight * 3});
         } else if (screenHeight * 3 + 500 <= scrollPosition && scrollPosition <= screenHeight * 4) {
-            window.scrollTo({ top: screenHeight * 4, behavior: 'smooth' });
+            window.scrollTo({ top: screenHeight * 4});
         }
     }
 }

@@ -255,7 +255,7 @@ h1 {
   padding-bottom: 8px;
 }
 #intro-profile > img:hover {
-  content: url(./img/after.png);
+  content: url(./img/before.png);
 }
 #intro-text {
   padding-bottom: 80px;
