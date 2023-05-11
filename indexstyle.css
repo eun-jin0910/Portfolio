@@ -13,14 +13,10 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 1000px) {
   #project-purpose, #project-environment {
     display: none;
   }
-}
-* {
-  /* border: 1px solid; */
 }
 @media screen and (max-width: 1366px) and (max-height: 768px) {
   #about-2 {
@@ -45,8 +41,6 @@
     top: 40% !important;
   }
 }
-
-/* mobile 규격 */
 @media screen and (max-width: 768px) {
   #menu-bar {
     opacity: 0;

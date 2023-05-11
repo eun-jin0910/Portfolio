@@ -91,9 +91,13 @@ function imgChange() {
 
 setTimeout(typingEffect1, 800);
 
+
+let menuScroll = false;
+
 // 메뉴바 클릭시 스크롤 부드럽게 이동
 function smoothScroll(event) {
     event.preventDefault();
+    menuScroll = true;
     const target = event.target.getAttribute('href');
     const element = document.querySelector(target);
     if (element) {
@@ -128,7 +132,7 @@ function scrollHandler() {
 let prevScrollpos = window.scrollY;
 window.addEventListener('scroll', function () {
     let currentScrollPos = window.scrollY;
-    if (prevScrollpos < currentScrollPos) {
+    if (!menuScroll && (prevScrollpos < currentScrollPos)) {
         scrollHandler();
     }
     prevScrollpos = currentScrollPos;
@@ -139,3 +143,4 @@ const topBtn = document.getElementById("top-btn");
 topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+ 
