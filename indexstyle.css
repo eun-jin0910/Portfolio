@@ -84,7 +84,8 @@
     width: 40vw;
   }
   #about-2 {
-    max-height: 32vh;
+    max-height: 38vh !important;
+    height: 35vh;
   }
   .about-me {
     margin-top: 0 !important;
@@ -102,14 +103,17 @@
     display: none;
   }
   .slide {
-    width: 91vw !important;
+    width: 95vw !important;
     text-align: center;
   }
   .slides {
-    width: 282vw !important;
+    width: 300vw !important;
   }
   .slider {
-    width: 94vw !important;
+    width: 100vw !important;
+  }
+  #project-img {
+    max-height: 55vw;
   }
   #project-info-1 {
     justify-content: center;
