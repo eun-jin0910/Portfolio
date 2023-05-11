@@ -19,13 +19,30 @@
     display: none;
   }
 }
-
+* {
+  /* border: 1px solid; */
+}
 @media screen and (max-width: 1366px) and (max-height: 768px) {
+  #about-2 {
+    height: 28vh;
+  }
+  #chart-skills {
+    margin-top: 0 !important;
+    height: 1vh !important;
+  }
+  
+  #project-purpose, #project-environment {
+    display: none;
+  }
   #blog-text {
     display: none;
   }
-  #project-purpose, #project-environment {
-    display: none;
+  #project-img {
+    max-width: 25vw !important;
+  }
+  .prev-btn,
+  .next-btn {
+    top: 40% !important;
   }
 }
 
