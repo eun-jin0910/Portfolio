@@ -13,6 +13,11 @@
     display: none;
   }
 }
+@media screen and (max-height: 890px) {
+  #project-purpose {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) {
   #project-purpose, #project-environment {
     display: none;

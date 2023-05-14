@@ -135,6 +135,7 @@ window.addEventListener('scroll', function () {
     if (!menuScroll && (prevScrollpos < currentScrollPos)) {
         scrollHandler();
     }
+    menuScroll = false;
     prevScrollpos = currentScrollPos;
 });
 
